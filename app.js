@@ -40,11 +40,10 @@ auth0
     if (isAuthenticated) {
       profileElement.style.display = "block";
       profileElement.innerHTML = `
-            <p>${userProfile.name}</p>
             <img src="${userProfile.picture}" />
           `;
-      loginButton.style.display = "block";
-      logoutButton.style.display = "hidden";
+      loginButton.style.display = "hidden";
+      logoutButton.style.display = "block";
     } else {
       profileElement.style.display = "none";
     }
