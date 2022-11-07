@@ -1,40 +1,73 @@
 * {
- box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
   width: 100%;
   height: 100vh;
+}
+
+.nav {
+  width: 100%;
+  padding: 1em;
   display: flex;
-  padding: 3em;
+  justify-content: flex-end;
 }
 
-.button {
-  width: 100%;
-  height: 100%;
+.nav > button {
+  padding: 0.5em;
+  width: 6em;
   border: 1px solid black;
-  border-radius: 3em;
+  border-radius: 0.5em;
+  margin-left: 1em;
+  background-color: transparent;
+  font-size: large;
+  cursor: pointer;
+}
+
+.nav > button:hover {
+  background-color: lightgray;
+}
+
+#logout {
+  display: none;
+}
+
+.dash {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+}
+
+.startstop {
+  border: 1px solid black;
+  border-radius: 2em;
   overflow: hidden;
+  height: 25vh;
 }
 
-.button-container {
-  width: 100%;
-  height:100%;
-  margin: 0;
-  padding: 3em;
+.startstop:hover {
+  background-color: lightgray;
 }
 
-.button > button {
+.startstop:active {
+  background-color: gray;
+}
+
+.startstop > button {
   width: 100%;
   height: 100%;
+  cursor: pointer;
   border: none;
   background-color: transparent;
-  cursor: pointer;
-
-  font-size: 5rem;
+  font-size: xx-large;
 }
 
-
-.button > button:hover {
-  background-color: lightgray;
+.status {
+  grid-column: 1/3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
