@@ -43,14 +43,13 @@ auth0
             <img src="${userProfile.picture}" />
           `;
       loginButton.classList.remove("visible");
-      loginButton.classList.add("invisible")
+      loginButton.classList.add("invisible");
       logoutButton.classList.add("visible");
     } else {
       profileElement.style.display = "none";
 
       logoutButton.classList.remove("visible");
-      logoutButton.classList.add("invisible")
+      logoutButton.classList.add("invisible");
       loginButton.classList.add("visible");
-    } else {
     }
   });
