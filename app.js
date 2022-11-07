@@ -26,9 +26,6 @@ auth0
     // Assumes a button with id "logout" in the DOM
     const logoutButton = document.getElementById("logout");
 
-    loginButton.style.display = "block";
-    logoutButton.style.display = "hidden";
-
     logoutButton.addEventListener("click", (e) => {
       e.preventDefault();
       auth0Client.logout();
@@ -45,9 +42,15 @@ auth0
       profileElement.innerHTML = `
             <img src="${userProfile.picture}" />
           `;
-      loginButton.style.display = "hidden";
-      logoutButton.style.display = "block";
+      loginButton.classList.remove("visible");
+      loginButton.classList.add("invisible")
+      logoutButton.classList.add("visible");
     } else {
       profileElement.style.display = "none";
+
+      logoutButton.classList.remove("visible");
+      logoutButton.classList.add("invisible")
+      loginButton.classList.add("visible");
+    } else {
     }
   });
