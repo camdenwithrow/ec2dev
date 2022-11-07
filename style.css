@@ -32,15 +32,15 @@
   background-color: lightgray;
 }
 
-#logout {
-  display: none;
-}
-
 #profile {
   height: 2em;
   border-radius: 50%;
   overflow: hidden;
   margin-left: 0.5em;
+}
+
+#profile > img {
+  height: 2em;
 }
 
 .dash {

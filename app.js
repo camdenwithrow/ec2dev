@@ -26,6 +26,9 @@ auth0
     // Assumes a button with id "logout" in the DOM
     const logoutButton = document.getElementById("logout");
 
+    loginButton.style.display = "block";
+    logoutButton.style.display = "hidden";
+
     logoutButton.addEventListener("click", (e) => {
       e.preventDefault();
       auth0Client.logout();
